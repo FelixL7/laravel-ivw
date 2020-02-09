@@ -1,0 +1,16 @@
+{
+    "name": "felixl7/laravel-ivw",
+    "description": "IVW Integration for Laravel",
+    "authors": [
+        {
+            "name": "Felix Lipinski",
+            "email": "info@felixlipinski.de"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "FelixL7\\LaravelIvw\\": "src/"
+        }
+    }
+}
