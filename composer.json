@@ -1,16 +1,30 @@
 {
     "name": "felixl7/laravel-ivw",
     "description": "IVW Integration for Laravel",
+    "license": "MIT",
     "authors": [
         {
             "name": "Felix Lipinski",
-            "email": "info@felixlipinski.de"
+            "email": "info@felixlipinski.de",
+            "homepage": "https://felixlipinski.de"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=7.2"
+    },
     "autoload": {
         "psr-4": {
             "FelixL7\\LaravelIvw\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FelixL7\\LaravelIvw\\IvwServiceProvider"
+            ],
+            "aliases": {
+                "Ivw": "FelixL7\\LaravelIvw\\IvwFacade"
+            }
         }
     }
 }
