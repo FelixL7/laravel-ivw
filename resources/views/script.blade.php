@@ -1,4 +1,7 @@
 <script type="text/javascript">
-    var iam_data = {!! $iam_data !!};
-    iom.c(iam_data);
+    var iam_data = @json($iam_data);
+
+    @if ($enabled)
+        iom.c(iam_data, {{$method}});
+    @endif
 </script>

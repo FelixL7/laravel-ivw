@@ -15,17 +15,9 @@ class IvwServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../resources/config/config.php', 'ivw');
 
-        $iam_data = new IvwIamData(
-            config('ivw.st'),
-            config('ivw.cp'),
-            config('ivw.sv'),
-            config('ivw.co')
-        );
-        $ivw = new Ivw($iam_data);
+        $iam_data = new IvwIamData();
 
-        if(config('ivw.enabled') === false) {
-            $ivw->disable();
-        }
+        $ivw = new Ivw($iam_data);
 
         $this->app->instance('FelixL7\LaravelIvw\Ivw', $ivw);
         $this->app->alias('FelixL7\LaravelIvw\Ivw', 'ivw');

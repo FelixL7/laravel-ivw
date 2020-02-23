@@ -14,6 +14,7 @@ class IvwViewCreator {
 
     public function create(View $view) {
         $view->with('iam_data', $this->ivw->getIamData()->getIamDataJson())
-            ->with('enabled', $this->ivw->isEnabled());
+            ->with('enabled', $this->ivw->isEnabled())
+            ->with('method', $this->ivw->getMethod());
     }
 }
